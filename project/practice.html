@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+	<script type="text/javascript">
+		var o={x:1};p={x:1};
+        console.log(o===p);
+
+        
+        var a = ['a','b','c']; // An array we want to copy
+        var b = []; // A distinct array we'll copy into
+        for(var i = 0; i < a.length; i++) { // For each index of a[]
+            b[i] = a[i]; // Copy an element of a into b
+            }
+
+
+        function equalArrays(a,b) {
+            if (a.length != b.length) return false; // Different-size arrays not equal
+            for(var i = 0; i < a.length; i++) // Loop through all elements
+            if (a[i] !== b[i]) return false; // If any differ, arrays not equal
+            return true; // Otherwise they are equal
+            }
+
+            var fruits = ['Apple', 'Banana'];
+            console.log(fruits.length);
+
+
+
+
+
+
+	</script>
+</body>
+</html>
