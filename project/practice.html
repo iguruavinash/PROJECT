@@ -6,7 +6,8 @@
 <body>
 
 	<script type="text/javascript">
-		var o={x:1};p={x:1};
+        var o={x:1};
+        p={x:1};
         console.log(o===p);
 
         
@@ -27,6 +28,27 @@
             var fruits = ['Apple', 'Banana'];
             console.log(fruits.length);
 
+        var g=3;
+        var h="3";
+        console.log(g-h);
+
+        let nums=[1,2,3,4,4];
+        console.log(new Set(nums));
+
+        console.log(5<6<7);
+        console.log(7>6>5); 
+
+
+        f(0) // f is the function expression; 0 is the argument expression.
+        Math.max(x,y,z) // Math.max is the function; x, y and z are the arguments.
+        a.sort() // a.sort is the function; there are no arguments.
+            
+        var json = '{"result":true, "count":42}';
+        obj = JSON.parse(json);
+
+        console.log(obj.count); // expected output: 42
+
+        console.log(obj.result); // expected output: true
 
 
 
