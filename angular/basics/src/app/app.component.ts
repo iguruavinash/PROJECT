@@ -8,7 +8,7 @@ import { Component, ViewChild, OnInit, ElementRef } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Welcome to Angular Session';
   @ViewChild('user') userElement:ElementRef;
-  ngOnInit(){
+  ngOnInit() {
     console.log(this.userElement.nativeElement.value)
   }
   color = 'grey';
