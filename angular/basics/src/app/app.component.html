@@ -1,3 +1,26 @@
 <input type="text" #user value="content">
 <h3 [style.color] = 'color == "green" ? "grey" : "green"'>{{title}} </h3>
 <p >{{ 6 == 2*3}}</p>
+<button (click)='changeColor()'>Click</button><br><br>
+<input type="text"  [value] = 'username' (keyup) = 'updateUserDetails($event.target.value)'><br>
+<div>{{username}}</div>
+<br>
+
+<div>
+    <input type="text" 
+        [value] = 'username' 
+        (keyup.enter) = 'updateUserDetails($event.target.value)'
+        (blur) = 'changeInUserDetails($event.target.value)'
+    >
+    <br> <br>
+    <input type="text" [(ngModel)] = 'username'>
+</div>
+<br>
+
+<!-- <select *ngFor= 'let colorVal of arr'>                        //3 different color elements 
+    <option *ngFor= 'let colorVal of arr'>{{colorVal}}</option>   //will come with 3 colors
+</select> -->
+
+<select>
+    <option *ngFor= 'let colorVal of arr'>{{colorVal}}</option>
+</select>
