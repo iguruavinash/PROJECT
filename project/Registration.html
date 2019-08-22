@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <script text= "text/javascript">
+        function validateForm(){
+            var name= document.myForm.uName.value;
+            var pass= document.myForm.pWord.value;
+            var mail= document.myForm.eMail.value;
+
+            if(name == null || name == ""){
+                alert("Please enter the name");
+                return false;
+            }
+            else if(name.length<3){
+                document.myForm("result")="Name must be atleast 4 characters";
+            }
+            if(pass == null || pass == ""){
+                alert("Please enter the password");
+                return false;
+            }
+            if(mail == null || mail == ""){
+                alert("Please enter the Email");
+                return false;
+            }
+        }
+        </script>
+</head>
+<body>   
+    <div style= "text-align: center;" id="formvalidation">
+        <h1 style= "color: lightsalmon;">REGISTRATION FORM</h1>
+        <form name = "myForm" action = "form.js" method = "post" onsubmit="return validateForm()">
+            Username   : <input type="text" name = "uName" style= "color: red;"><br><br>
+            Password : <input type="password" name="pWord"><br><br>
+            Email : <input type="text" name="eMail"><br><br>
+            <input type="submit" value="Register"><br><br>
+        </form>
+    </div>
+    
+</body>
+</html>
