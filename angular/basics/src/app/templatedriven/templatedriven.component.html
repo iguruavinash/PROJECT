@@ -1,29 +1,33 @@
-<form #loginFormGroup = 'ngForm' (ngSubmit)= "formDetails(loginFormGroup)">
+<form #loginFormGroup = 'ngForm' (ngSubmit)= "formDetails(loginFormGroup)" style= "text-align: center;">
+    <h2 style= "color: lightsalmon;" >REGISTRATION FORM</h2>
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
+          <label for="exampleInputEmail1" style="color: red" >Email :</label>
           <input 
             type="email" 
             ngModel
             name="email"
+            style="color: blue"
             class="form-control" 
             id="exampleInputEmail1" 
-            aria-describedby="emailHelp" placeholder="Enter email">
+            aria-describedby="emailHelp" 
+            placeholder="Enter email">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+          <label for="exampleInputPassword1" style="color: rgb(255, 0, 119)">Password :</label>
           <input 
             type="password" 
             ngModel
             name = 'password'
+            style="color: blue"
             class="form-control" 
             id="exampleInputPassword1" 
             placeholder="Password">
         </div>
         <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" >
+          <label class="form-check-label" for="exampleCheck1" style="color: brown">Check me out</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" style="color:black">Submit</button>
       </form>
       
