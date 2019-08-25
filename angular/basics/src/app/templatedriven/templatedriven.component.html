@@ -1,33 +1,91 @@
-<form #loginFormGroup = 'ngForm' (ngSubmit)= "formDetails(loginFormGroup)" style= "text-align: center;">
-    <h2 style= "color: lightsalmon;" >REGISTRATION FORM</h2>
-        <div class="form-group">
-          <label for="exampleInputEmail1" style="color: red" >Email :</label>
-          <input 
-            type="email" 
-            ngModel
-            name="email"
-            style="color: blue"
-            class="form-control" 
-            id="exampleInputEmail1" 
-            aria-describedby="emailHelp" 
-            placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1" style="color: rgb(255, 0, 119)">Password :</label>
-          <input 
-            type="password" 
-            ngModel
-            name = 'password'
-            style="color: blue"
-            class="form-control" 
-            id="exampleInputPassword1" 
-            placeholder="Password">
-        </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" >
-          <label class="form-check-label" for="exampleCheck1" style="color: brown">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary" style="color:black">Submit</button>
-      </form>
-      
+
+          <h2>Registration Form</h2>
+          <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #loginFormGroup="ngForm" >
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" 
+              class="form-control" 
+              [(ngModel)]="model.firstName" 
+              #firstName="ngModel"
+              pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" 
+              [ngClass]="{'is-invalid':loginFormGroup.submitted && firstName.invalid}" 
+              name="firstName" 
+              required >
+              <div class="invalid-feedback">
+                <div>First Name is required</div>
+                <div *ngIf="firstName.errors.pattern">Only Name!</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" 
+              class="form-control" 
+              [(ngModel)]="model.lastName" 
+              #lastName="ngModel" 
+              [ngClass]="{'is-invalid':loginFormGroup.submitted && lastName.invalid}" 
+              name="lastName" 
+              required >
+              <div class="invalid-feedback">
+                <div>Last Name is required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" 
+              class="form-control" 
+              [(ngModel)]="model.email" 
+              #email="ngModel" 
+              [ngClass]="{'is-invalid':loginFormGroup.submitted && email.invalid}" 
+              name="email" 
+              required 
+              email>
+              <div *ngIf="loginFormGroup.submitted && email.invalid" class="invalid-feedback">
+                <div *ngIf="email.errors.required">Email Name is required</div>
+                <div *ngIf="email.errors.email">Email must be a valid email Address</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" 
+              class="form-control" 
+              [(ngModel)]="model.password" 
+              #password="ngModel" 
+              [ngClass]="{'is-invalid':loginFormGroup.submitted && password.invalid}" 
+              name="password" 
+              required 
+              minlength="6">
+              <div *ngIf="loginFormGroup.submitted && password.invalid" class="invalid-feedback">
+                <div *ngIf="password.errors.required">Password Name is required</div>
+                <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="phonenumber">Phone Number</label>
+                <input type="phonenumber" 
+                class="form-control" 
+                [(ngModel)]="model.phonenumber" 
+                #phonenumber="ngModel" 
+                [ngClass]="{'is-invalid':loginFormGroup.submitted && phonenumber.invalid}" 
+                name="phonenumber" 
+                required 
+                pattern ="[/[6-9]\d{9}/]"
+                minlength="10"
+                maxlength="10">
+                <div *ngIf="loginFormGroup.submitted && phonenumber.invalid" class="invalid-feedback">
+                  <div *ngIf="phonenumber.errors.required">Phone Number is required</div>
+                  <div *ngIf="phonenumber.errors.minlength">Password must be at least 10 numbers</div>
+                  <div *ngIf="phonenumber.errors.maxlength">Password must be 10 numbers</div>
+                  <div *ngIf="phonenumber.errors.pattern">Only Numbers!</div>
+                </div>
+              </div>
+
+            <div class="form-group">
+              <button class="btn btn-primary">Register</button>
+            </div>
+          </form>
+       
+  
