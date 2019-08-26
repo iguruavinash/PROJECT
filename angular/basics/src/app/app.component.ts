@@ -11,7 +11,6 @@ export class AppComponent implements OnInit {
   arr = ['red', 'green', 'blue'];
   @ViewChild('user', {static: false}) userElement: ElementRef;
   ngOnInit() {
-    console.log(this.userElement.nativeElement.value);
   }
   color = 'grey';
   changeColor() {

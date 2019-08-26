@@ -9,10 +9,11 @@ import { from } from 'rxjs';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
   ],
   imports: [
     BrowserModule,

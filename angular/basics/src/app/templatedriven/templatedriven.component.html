@@ -1,19 +1,19 @@
-
-          <h2>Registration Form</h2>
-          <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #loginFormGroup="ngForm" >
+<div class="container">
+<h2>Registration Form</h2>
+          <form name="form" #loginFormGroup="ngForm" (ngSubmit)="onSubmit(loginFormGroup)">
             <div class="form-group">
               <label for="firstName">First Name</label>
               <input type="text" 
               class="form-control" 
               [(ngModel)]="model.firstName" 
-              #firstName="ngModel"
-              pattern="[a-zA-Z][a-zA-Z]+" 
-              [ngClass]="{'is-invalid':loginFormGroup.submitted && firstName.invalid}" 
+              #firstName="ngModel"            
+              pattern="[a-zA-Z]+"
+              [ngClass]="{'is-invalid': firstName.invalid}" 
               name="firstName" 
               required >
               <div class="invalid-feedback">
-                <div>First Name is required</div>
-                <div *ngIf="firstName.errors.pattern">Only Letters!</div>
+                <div *ngIf ="firstName.errors?.required">First Name is Required</div>
+                <div *ngIf ="firstName.errors?.pattern">Only Letters!</div>
               </div>
             </div>
 
@@ -23,11 +23,13 @@
               class="form-control" 
               [(ngModel)]="model.lastName" 
               #lastName="ngModel" 
-              [ngClass]="{'is-invalid':loginFormGroup.submitted && lastName.invalid}" 
+              pattern="[a-zA-Z]+"
+              [ngClass]="{'is-invalid': lastName.invalid}" 
               name="lastName" 
               required >
               <div class="invalid-feedback">
-                <div>Last Name is required</div>
+                  <div *ngIf ="lastName.errors?.required">Last Name is Required</div>
+                  <div *ngIf ="lastName.errors?.pattern">Only Letters!</div>
               </div>
             </div>
 
@@ -72,20 +74,49 @@
                 [ngClass]="{'is-invalid':loginFormGroup.submitted && phonenumber.invalid}" 
                 name="phonenumber" 
                 required 
-                pattern ="[/[6-9]\d{9}/]"
+                pattern ="[0-9]*"
                 minlength="10"
                 maxlength="10">
                 <div *ngIf="loginFormGroup.submitted && phonenumber.invalid" class="invalid-feedback">
                   <div *ngIf="phonenumber.errors.required">Phone Number is required</div>
-                  <div *ngIf="phonenumber.errors.minlength">Password must be at least 10 numbers</div>
-                  <div *ngIf="phonenumber.errors.maxlength">Password must be 10 numbers</div>
+                  <div *ngIf="phonenumber.errors.minlength">Phone Number must be at least 10 numbers</div>
+                  <div *ngIf="phonenumber.errors.maxlength">Phone Number must be 10 numbers</div>
                   <div *ngIf="phonenumber.errors.pattern">Only Numbers!</div>
                 </div>
               </div>
+
+              <div class="form-group">
+                  <label for="city">City</label>
+                  <input type="text" 
+                  class="form-control" 
+                  [(ngModel)]="model.city" 
+                  #city="ngModel" 
+                  pattern="[a-zA-Z]+"
+                  [ngClass]="{'is-invalid': city.invalid}" 
+                  name="city" 
+                  required >
+                  <br>
+                  <select city="selectChangeHandler($event)" >
+                    <option value="Miyapur">Miyapur</option>
+                    <option value="JNTU College">JNTU College</option>
+                    <option value="KPHB Colony">KPHB Colony</option>
+                    <option value="Kukatpally">Kukatpally</option>
+                    <option value="Balanagar">Balanagar</option>
+                    <option value="Moosapet">Moosapet</option>
+                    <option value="Bharathnagar">Bharath Nagar</option>
+                    <option value="Erragadda">Erragadda</option>
+                    <option value="ESI Hospital">ESI Hospital</option>
+                    <option value="SR nagar">SR Nagar</option>
+                    <option value="Ameerpet">Ameerpet</option>
+                  </select>
+                  
+                </div>
+
+
 
             <div class="form-group">
               <button class="btn btn-primary">Register</button>
             </div>
           </form>
-       
+       </div>
   
