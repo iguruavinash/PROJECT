@@ -7,13 +7,13 @@
               class="form-control" 
               [(ngModel)]="model.firstName" 
               #firstName="ngModel"
-              pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" 
+              pattern="[a-zA-Z][a-zA-Z]+" 
               [ngClass]="{'is-invalid':loginFormGroup.submitted && firstName.invalid}" 
               name="firstName" 
               required >
               <div class="invalid-feedback">
                 <div>First Name is required</div>
-                <div *ngIf="firstName.errors.pattern">Only Name!</div>
+                <div *ngIf="firstName.errors.pattern">Only Letters!</div>
               </div>
             </div>
 
