@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TemplateDrivenComponent} from './templatedriven/templatedriven.component';
 import { from } from 'rxjs';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 
 
@@ -14,6 +15,7 @@ import { from } from 'rxjs';
   declarations: [
     AppComponent,
     TemplateDrivenComponent,
+    ReactiveformComponent,
   ],
   imports: [
     BrowserModule,

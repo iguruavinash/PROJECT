@@ -1,6 +1,8 @@
 <div class="container">
+    <div class="jumbotron">
 <h2>Registration Form</h2>
           <form name="form" #loginFormGroup="ngForm" (ngSubmit)="onSubmit(loginFormGroup)">
+            
             <div class="form-group">
               <label for="firstName">First Name</label>
               <input type="text" 
@@ -8,7 +10,7 @@
               [(ngModel)]="model.firstName" 
               #firstName="ngModel"            
               pattern="[a-zA-Z]+"
-              [ngClass]="{'is-invalid': firstName.invalid}" 
+              [ngClass]="{'is-invalid': loginFormGroup.submitted &&  firstName.invalid}" 
               name="firstName" 
               required >
               <div class="invalid-feedback">
@@ -24,7 +26,7 @@
               [(ngModel)]="model.lastName" 
               #lastName="ngModel" 
               pattern="[a-zA-Z]+"
-              [ngClass]="{'is-invalid': lastName.invalid}" 
+              [ngClass]="{'is-invalid':loginFormGroup.submitted && lastName.invalid}" 
               name="lastName" 
               required >
               <div class="invalid-feedback">
@@ -55,13 +57,15 @@
               class="form-control" 
               [(ngModel)]="model.password" 
               #password="ngModel" 
-              [ngClass]="{'is-invalid':loginFormGroup.submitted && password.invalid}" 
+              pattern ="/^[A-Za-z0-9!@#$%&*]+$/"
+              [ngClass]="{'is-invalid':loginFormGroup.submitted &&  password.invalid }" 
               name="password" 
               required 
               minlength="6">
-              <div *ngIf="loginFormGroup.submitted && password.invalid" class="invalid-feedback">
-                <div *ngIf="password.errors.required">Password Name is required</div>
+              <div *ngIf="loginFormGroup.submitted &&  password.invalid" class="invalid-feedback">
+                <div *ngIf="password.errors.required">Password is required</div>
                 <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                <div *ngIf="password.errors.pattern">Password should have special characters</div>
               </div>
             </div>
             
@@ -92,10 +96,10 @@
                   [(ngModel)]="model.city" 
                   #city="ngModel" 
                   pattern="[a-zA-Z]+"
-                  [ngClass]="{'is-invalid': city.invalid}" 
                   name="city" 
                   required >
-                  <br>
+                </div>
+                <div>
                   <select city="selectChangeHandler($event)" >
                     <option value="Miyapur">Miyapur</option>
                     <option value="JNTU College">JNTU College</option>
@@ -109,14 +113,12 @@
                     <option value="SR nagar">SR Nagar</option>
                     <option value="Ameerpet">Ameerpet</option>
                   </select>
-                  
                 </div>
-
-
-
+                <br>
             <div class="form-group">
               <button class="btn btn-primary">Register</button>
             </div>
           </form>
+          </div>
        </div>
   
