@@ -95,12 +95,12 @@
                   class="form-control" 
                   [(ngModel)]="model.city" 
                   #city="ngModel" 
-                  pattern="[a-zA-Z]+"
+                  
                   name="city" 
                   required >
                 </div>
                 <div>
-                  <select city="selectChangeHandler($event)" >
+                  <select name="city" [(ngModel)]="model.city" class="form-control">
                     <option value="Miyapur">Miyapur</option>
                     <option value="JNTU College">JNTU College</option>
                     <option value="KPHB Colony">KPHB Colony</option>

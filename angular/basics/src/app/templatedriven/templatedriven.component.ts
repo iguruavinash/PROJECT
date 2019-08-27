@@ -11,7 +11,7 @@ export class TemplateDrivenComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  
+
   }
   // formDetails(d) {
   //   console.log(d);
