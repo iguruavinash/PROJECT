@@ -57,7 +57,7 @@
               class="form-control" 
               [(ngModel)]="model.password" 
               #password="ngModel" 
-              pattern ="/^[A-Za-z0-9!@#$%&*]+$/"
+              pattern ="^[A-Za-z0-9!@#$%&*]+$"
               [ngClass]="{'is-invalid':loginFormGroup.submitted &&  password.invalid }" 
               name="password" 
               required 
