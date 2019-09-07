@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { TemplateDrivenComponent} from './templatedriven/templatedriven.component';
 import { from } from 'rxjs';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { CustomersComponent } from './customers/customers.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 
 
@@ -16,6 +18,8 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     AppComponent,
     TemplateDrivenComponent,
     ReactiveformComponent,
+    CustomersComponent,
+    CustomerDetailComponent,
   ],
   imports: [
     BrowserModule,
