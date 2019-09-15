@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {path: 'customers', loadChildren: './customers/customers.module#CustomersModule'}
+  {path: 'customers', loadChildren: './customers/customers.module#CustomersModule'}  // lazy loading
 ];
 
 @NgModule({
