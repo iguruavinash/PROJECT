@@ -1,10 +1,10 @@
 [
     {
         "id": 1,
-        "firstName": "varun",
-        "lastName": "reddy",
+        "firstName": "Guru",
+        "lastName": "Avinash",
         "gender": "male",
-        "address": "lb nagar",
+        "address": "Lingampalli",
         "city": "hyderabad",
         "state": {
             "abbreviation": "TS",
@@ -25,10 +25,10 @@
     },
     {
         "id": 2,
-        "firstName": "venugopal",
-        "lastName": "Reddy",
+        "firstName": "Raghu",
+        "lastName": "Veer",
         "gender": "male",
-        "address": "ecil",
+        "address": "Kphb",
         "city": "hyderabad",
         "state": {
             "abbreviation": "Ts",
@@ -49,10 +49,10 @@
     },
     {
         "id": 3,
-        "firstName": "arun",
-        "lastName": "joshi",
+        "firstName": "Varun",
+        "lastName": "Naidu",
         "gender": "male",
-        "address": "dilsuknagar",
+        "address": "JNTU",
         "city": "hyderabad ",
         "state": {
             "abbreviation": "Ts",

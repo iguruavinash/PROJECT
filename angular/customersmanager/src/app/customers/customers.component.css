@@ -1,0 +1,12 @@
+.icon-user:before {
+    content: "\1f466";
+  }
+  .icon-plus:before {
+    content: "\271a";
+  }
+  .icon-view-tile:before {
+    content: "\268f";
+  }
+  .icon-view-list:before {
+    content: "\2630";
+  }
