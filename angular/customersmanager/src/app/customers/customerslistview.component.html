@@ -7,8 +7,8 @@
         <th>View Orders</th>
       </tr>
     <tbody>
-      <tr *ngFor = "let data of customersData" [routerLink] = '[data.id,"detail"]'>
-        <th scope="row">{{data.firstName | titlecase}}</th>
+      <tr *ngFor = "let data of customersData">
+        <th scope="row" [routerLink] = '[data.id,"detail"]'>{{data.firstName | titlecase}}</th>
         <td>{{data.lastName | titlecase}}</td>
         <td>{{data.city | titlecase}}</td>
         <td>{{data.state.name}}</td>
