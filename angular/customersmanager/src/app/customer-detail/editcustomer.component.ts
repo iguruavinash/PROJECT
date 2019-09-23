@@ -24,10 +24,10 @@ export class EditcustomerComponent implements OnInit {
         console.log(this.CustomerInfo);
         this.rootFormGroup = new FormGroup({
           firstName: new FormControl(this.CustomerInfo.firstName, Validators.required),
-          lastName: new FormControl('', [Validators.required]),
-          address: new FormControl(''),
-          city: new FormControl(),
-          state: new FormControl(),
+          lastName: new FormControl(this.CustomerInfo.lastName, Validators.required),
+          // address: new FormControl(this.CustomerInfo.address, Validators.required),
+          city: new FormControl(this.CustomerInfo.city, Validators.required),
+          state: new FormControl(this.CustomerInfo.state.name, Validators.required),
         });
       });
 
