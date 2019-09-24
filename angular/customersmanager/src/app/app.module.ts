@@ -13,10 +13,10 @@ import { LoginModule } from './login/login.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CoreModule,
+    AppRoutingModule, // Main routes for application
+    CoreModule, // Singleton objects (services, components that are loaded only once, etc.)
     HttpClientModule,
-    LoginModule
+    LoginModule       // Eager loaded since we may need to go here right away as browser loads based on route user enters
   ],
   providers: [],
   bootstrap: [AppComponent]

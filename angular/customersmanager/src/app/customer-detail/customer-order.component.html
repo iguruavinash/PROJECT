@@ -1,1 +1,20 @@
 <p>customer-order works!</p>
+<!-- <div class="container">
+    <div class="row" *ngIf = 'CustomerDetailedInfo'>
+        <h4>Orders for {{ CustomerDetailedInfo.firstName | titlecase }} {{ CustomerDetailedInfo.lastName | titlecase }}</h4>
+        <br />
+        <table class="table table-striped table-hover orders-table">
+            <tr *ngIf = 'CustomerDetailedInfo'>
+                <td>{{ order.productName }}</td>
+                <td class="text-right">{{ order.itemCost | currency:'INR':'symbol' }}</td>
+            </tr>
+            <tr class="summary-border">
+                <td>&nbsp;</td>
+                <td class="text-right">{{ CustomerDetailedInfo.orderTotal | currency:'INR':'symbol' }}</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="!customer" class="row">
+        No customer found
+    </div>
+</div> -->

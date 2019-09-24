@@ -1,13 +1,20 @@
-<div class="col-sm-4" *ngIf = 'CustomerDetailedInfo'>
-    <div class="card" >
-      <div class="card-header">
+<div class="card" *ngIf='CustomerDetailedInfo'>
+  <div class="row">
+    <div class="card-image">
+      <img src="assets/{{CustomerDetailedInfo.gender | lowercase}}.png" class="card-image" width="200" height="200">
+      <br>
+    </div>
+    <div class="card">
+      <h3>
         {{CustomerDetailedInfo.firstName | titlecase  }} {{CustomerDetailedInfo.lastName | titlecase }}
-      </div>
-      <div class="card-body">
-        <p class="card-text">{{CustomerDetailedInfo.address}}</p>
-        <p class="card-text">{{CustomerDetailedInfo.city}}</p>
-        <p class="card-text">{{CustomerDetailedInfo.state.name}}</p>
-
-      </div>
+      </h3>
+      <br>
+      {{CustomerDetailedInfo.address}}
+      <br>
+      {{CustomerDetailedInfo.city}}
+      <br>
+      {{CustomerDetailedInfo.state.name}}
+      <br>
     </div>
   </div>
+</div>

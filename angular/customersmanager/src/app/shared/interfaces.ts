@@ -9,16 +9,11 @@ export interface ICustomer {
         'abbreviation': 'String';
         'name': 'String'
     };
-    'orders': [
-        {
-            'productName': 'String';
-            'itemCost': 'Number'
-        },
-        {
-            'productName': 'String';
-            'itemCost': 'Number'
-        }
-    ];
     'latitude'?: 'Number';
     'longitude'?: 'Number';
+}
+
+export interface IOrder {
+    productName: string;
+    itemCost: number;
 }

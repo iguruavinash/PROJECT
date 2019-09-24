@@ -1,5 +1,6 @@
 <table class="table table-striped">
       <tr>
+        <th> </th>
         <th >FirstName </th>
         <th >LastName</th>
         <th>City</th>
@@ -8,11 +9,12 @@
       </tr>
     <tbody>
       <tr *ngFor = "let data of customersData">
-        <th scope="row" [routerLink] = '[data.id,"detail"]'>{{data.firstName | titlecase}}</th>
+        <td><img src="assets/{{ data.gender | lowercase }}.png" class="grid-image" width="150" height="150" alt="Customer Image"></td>
+        <td scope="row" [routerLink] = '[data.id,"detail"]'>{{data.firstName | titlecase}}</td>
         <td>{{data.lastName | titlecase}}</td>
         <td>{{data.city | titlecase}}</td>
         <td>{{data.state.name}}</td>
-        <td><a href="#" class="btn btn-primary">View Orders</a></td>
+        <td><a [routerLink]= '[data.id, "orders"]' class="btn btn-primary">View Orders</a></td>
       </tr>
     </tbody>
 </table>
