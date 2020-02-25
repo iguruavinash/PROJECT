@@ -1,0 +1,201 @@
+*{
+	margin: 0;
+	padding:0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box; 
+}
+html {
+   height: 100%;
+}
+body{
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size: 12px;
+	
+	
+   min-height: 100%;
+
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	margin: 5px 0; 
+}
+
+img{
+	display: block;
+}
+
+.row{
+	width: 100%;
+	float: left;
+}
+
+.container{
+	width: 1040px;
+	margin: auto;
+}
+
+.inner{
+	float: left; 
+	width: 100%;
+	padding: 15px 0;
+}
+
+
+.inner.widthless{
+	width: 60%;
+}
+
+.header{
+	margin-top: 10px;
+	padding: 10px 0;
+}
+
+header img{
+	float: left;
+	margin-right: 20px;
+}
+
+header h1{
+	padding-top: 25px;
+}
+nav{
+	padding: 10px 0;
+}
+nav li {
+	display: inline-block;
+}
+
+nav li a{
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+
+nav li a:hover{
+	text-decoration: underline;
+}
+
+nav li a.active{
+	background: white;
+	color: #191919;
+	border-radius: 4px;
+}
+
+.white{
+	background: white;
+}
+
+.darkBrown{
+	background: #191919;
+}
+
+.blurbg{
+	
+	background-size: cover;
+}
+
+.col{
+	margin-left: -10px;
+	margin-right: -10px;
+	list-style-type: none
+}
+
+.col > .col-3{
+	width: 33.333%;
+	float: left;
+	padding: 10px;
+	min-height: 200px;
+}
+
+.col > .col-5{
+	width: 20%;
+	float: left;
+	padding: 10px;
+	min-height: 200px;
+}
+
+.colinner{
+
+	background: white;
+	min-height: 200px;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.colinner a{
+	color: inherit;
+	text-decoration: none;
+}
+
+.colinner h3{
+	color: red;
+	display: block;
+	padding-bottom: 5px;
+	border-bottom: 2px solid green;
+}
+.colinner h4{
+	margin: 10px 0;
+}
+
+.colinner p{
+	
+}
+
+.colinner .price{
+	color: gray;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+fieldset{
+	border: 1px solid #fff;
+	padding: 10px;
+}
+
+legend{
+	padding: 0 5px;
+	font-size: 15px;
+}
+
+dt {
+	font-weight: bold;
+	float: left;
+	width: 200px;
+	text-align: right;
+	padding: 5px 20px 5px 0;
+}
+dd {
+	padding: 5px 20px 5px 0;
+}
+
+.footer{
+	border-top: 10px solid gray;
+	margin-top: 20px;
+}
+footer{
+	padding: 10px 0;
+}
+
+footer ul{
+	float: left;
+}
+
+footer li {
+	display: inline-block;
+	color: #fff;
+}
+
+footer li a{
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+
+footer li a:hover{
+	text-decoration: underline;
+}

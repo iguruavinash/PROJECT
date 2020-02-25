@@ -9,7 +9,7 @@ export class DataService {
     constructor(private http: HttpClient) {
 
     }
-    url = '/api/customers'; '/api/orders/:id';
+    url = '/api/customers'; '/api/orders';
     getCustomersData(): Observable<ICustomer[]> {
         return this.http.get<ICustomer[]>(this.url).pipe(
             map(data => data)
